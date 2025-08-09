@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,4 +111,89 @@
     .subtle-card-with-text:hover .overlay-text { opacity: 1; }
 
     /* Social Icons */
-    .social-icons
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 18px 0;
+    }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+      fill: var(--accent);
+      transition: fill 0.3s ease;
+    }
+
+    body.dark .icon { fill: #b69ad4; }
+    .icon:hover { fill: var(--accent-hover); }
+  </style>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL72FZ9YZ2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QL72FZ9YZ2');
+  </script>
+</head>
+
+<body>
+  <!-- Moon Toggle -->
+  <div id="mode-toggle" style="max-width: 390px; margin: 0 auto; display: flex; justify-content: flex-end; padding: 16px 22px;">
+    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#6a5799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor: pointer; transition: transform 0.3s ease;">
+      <path d="M21 12.79A9 9 0 0112.21 3a7 7 0 100 14.58A9 9 0 0021 12.79z"/>
+    </svg>
+  </div>
+
+  <!-- Form -->
+  <div class="iphone-frame" style="padding: 0; border: none; box-shadow: none;">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdfWaX2-hkFLzavXANDGMP0ZnbPHWbui9MAm6tWi7oUWAIjfQ/viewform?embedded=true"
+      width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0"
+      style="border-radius: 1rem; background: transparent; box-shadow: 0 0 20px rgba(173, 140, 255, 0.3);" allowfullscreen>
+      Loading…
+    </iframe>
+  </div>
+
+  <!-- Image -->
+  <div class="iphone-frame subtle-card-with-text" style="padding: 0; border: none; box-shadow: none;">
+    <img src="vmvol.png" alt="Volunteer" />
+    <div class="overlay-text">𓆩dive in𓆪</div>
+  </div>
+  
+  <!-- Seva Card -->
+  <div class="iphone-frame">
+    <h1>Seva सेवा</h1>
+    <p>to serve, to attend to, to honor</p>
+    <ul class="features">
+      <li>Uplift consciousness</li>
+      <li>Meet & Greet versions of you</li>
+      <li>Dwell in awe and awareness</li>
+      <li>Diverse paths yet One place</li>
+    </ul>
+  </div>
+
+  <!-- Social Icons -->
+  <div class="iphone-frame" style="text-align: center; padding-top: 24px;">
+    <div class="social-icons">
+      <!-- Social SVGs as in your original code -->
+    </div>
+  </div>
+
+  <script>
+    const moonIcon = document.getElementById("moon-icon");
+    let darkMode = false;
+    moonIcon.addEventListener("click", () => {
+      darkMode = !darkMode;
+      document.body.classList.toggle("dark", darkMode);
+      document.documentElement.style.setProperty('--bg', darkMode ? '#1c1c1e' : '#f4f6f9');
+      document.documentElement.style.setProperty('--text', darkMode ? '#e0e0e0' : '#1c1c1e');
+      document.documentElement.style.setProperty('--muted', darkMode ? '#aaa' : '#777');
+      document.documentElement.style.setProperty('--border', darkMode ? '#444' : '#d9e1ec');
+      document.documentElement.style.setProperty('--box-bg', darkMode ? '#2c2c2e' : '#ffffff');
+      moonIcon.style.transform = darkMode ? "rotate(180deg)" : "rotate(0deg)";
+    });
+  </script>
+</body>
+</html>
