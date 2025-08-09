@@ -1,0 +1,17 @@
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f9f9f9; /* optional */
+  }
+
+  iframe {
+    border: none;
+    width: 100%;
+    max-width: 640px; /* keeps it readable on large screens */
+    height: 800px;
+  }
+</style>
