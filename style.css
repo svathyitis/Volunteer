@@ -1,17 +1,13 @@
 <style>
-  body {
+  .google-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background: #f9f9f9; /* optional */
+    height: 100vh; /* Full height of screen */
   }
-
-  iframe {
-    border: none;
-    width: 100%;
-    max-width: 640px; /* keeps it readable on large screens */
+  .google-form-container iframe {
+    width: 640px; /* Default Google Form width */
     height: 800px;
+    border: none;
   }
 </style>
